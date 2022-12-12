@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
       </nb-layout-header>
 
       <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive>
-        <ng-content select="nb-menu"></ng-content>
+        <ng-content select="ngx-tree"></ng-content>
       </nb-sidebar>
 
       <nb-layout-column>
