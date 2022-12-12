@@ -64,6 +64,11 @@ $nb-themes: nb-register-theme((
   slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
   slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
   slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+
+  layout-window-mode-padding-top: 3rem,
+  header-height: 3rem,
+  header-background-color: #2a2a2a,
+
 ), corporate, corporate);
 
 $nb-themes: nb-register-theme((
