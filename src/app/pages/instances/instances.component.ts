@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AbstractHwProfileWithIntelCpuV1 } from '../../../data/types/hardware-profiles/abstracts/AbstractNodeWithIntelCpu';
+import workerNode from '../../../data/instances/cluster0/WorkerNodeInstance';
 @Component({
   selector: 'ngx-instances',
   templateUrl: './instances.component.html',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstancesComponent implements OnInit {
 
-  constructor() { }
+  workerNode: AbstractHwProfileWithIntelCpuV1;
+
+  constructor() {
+    this.workerNode = workerNode
+  }
 
   ngOnInit(): void {
   }
