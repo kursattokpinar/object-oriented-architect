@@ -1,4 +1,4 @@
-export type DataCapacity = {
-    value: number,
-    unit: 'KB' | 'MB' | 'GB' | 'TB'
-}  
+export interface DataCapacity {
+    value: number;
+    unit: 'KB' | 'MB' | 'GB' | 'TB';
+}

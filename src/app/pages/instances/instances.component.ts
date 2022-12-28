@@ -4,14 +4,14 @@ import workerNode from '../../../data/instances/cluster0/WorkerNodeInstance';
 @Component({
   selector: 'ngx-instances',
   templateUrl: './instances.component.html',
-  styleUrls: ['./instances.component.scss']
+  styleUrls: ['./instances.component.scss'],
 })
 export class InstancesComponent implements OnInit {
 
   workerNode: AbstractHwProfileWithIntelCpuV1;
 
   constructor() {
-    this.workerNode = workerNode
+    this.workerNode = workerNode;
   }
 
   ngOnInit(): void {

@@ -18,10 +18,10 @@ import { InstancesModule } from './instances/instances.module';
     ECommerceModule,
     MiscellaneousModule,
     NbSidebarModule,
-    InstancesModule
+    InstancesModule,
   ],
   declarations: [
-    PagesComponent
+    PagesComponent,
   ],
 })
 export class PagesModule {

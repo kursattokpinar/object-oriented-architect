@@ -1,5 +1,5 @@
-import { NetworkAdapterV1 } from "../sub/network/pub/NetworkAdapter"
+import { NetworkAdapterV1 } from '../sub/network/pub/NetworkAdapter';
 
-export type NetworkAdapterProfileV1 = {
-    networkAdapter: NetworkAdapterV1
+export interface NetworkAdapterProfileV1 {
+    networkAdapter: NetworkAdapterV1;
 }

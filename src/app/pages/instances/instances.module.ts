@@ -4,10 +4,10 @@ import { InstancesComponent } from './instances.component';
 
 @NgModule({
   declarations: [
-    InstancesComponent
+    InstancesComponent,
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+  ],
 })
 export class InstancesModule { }

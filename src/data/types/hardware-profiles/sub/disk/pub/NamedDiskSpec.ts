@@ -1,6 +1,6 @@
-import { DiskSpecV1 } from "./DiskSpec"
+import { DiskSpecV1 } from './DiskSpec';
 
-export type NamedDiskSpecV1 = {
-    name: string,
-    spec: DiskSpecV1
+export interface NamedDiskSpecV1 {
+    name: string;
+    spec: DiskSpecV1;
 }

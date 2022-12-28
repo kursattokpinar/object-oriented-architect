@@ -62,7 +62,7 @@ const COMPONENTS = [
   OneColumnLayoutComponent,
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
-  TreeComponent
+  TreeComponent,
 ];
 const PIPES = [
   CapitalizePipe,

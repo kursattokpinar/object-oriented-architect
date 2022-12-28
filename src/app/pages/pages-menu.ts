@@ -16,5 +16,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Policies',
     icon: 'shield-outline',
     link: '/pages/policies',
-  }
+  },
 ];

@@ -1,5 +1,5 @@
-import { MemorySpecV1 } from "../sub/memory/pub/MemorySpec"
+import { MemorySpecV1 } from '../sub/memory/pub/MemorySpec';
 
-export type MemoryProfileV1 = {
-    memorySpec: MemorySpecV1
+export interface MemoryProfileV1 {
+    memorySpec: MemorySpecV1;
 }
