@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractHwProfileWithIntelCpuV1 } from '../../../data/types/hardware-profiles/abstracts/AbstractNodeWithIntelCpu';
-import workerNode from '../../../data/instances/cluster0/WorkerNodeInstance';
+import {rke2WorkerNodeTemplate} from '../../../data/templates/rke2-cluster/masterNodeTemplate';
 @Component({
   selector: 'ngx-instances',
   templateUrl: './instances.component.html',
@@ -8,10 +7,10 @@ import workerNode from '../../../data/instances/cluster0/WorkerNodeInstance';
 })
 export class InstancesComponent implements OnInit {
 
-  workerNode: AbstractHwProfileWithIntelCpuV1;
+  workerNode: object;
 
   constructor() {
-    this.workerNode = workerNode;
+    this.workerNode = rke2WorkerNodeTemplate;
   }
 
   ngOnInit(): void {

@@ -1,8 +1,10 @@
 import { DataCapacity } from '../../../../core/DataCapacity';
+import { Optional } from '../../../../core/Optional';
 
 
 export interface DiskSpecV1 {
     capacity: DataCapacity;
-    provisioningType: 'thin' | 'thick';
-    fileSystemType: 'ext4' | 'XFS' | 'NTFS' | 'FAT' | 'Btrfs';
+    provisioningType: Optional<'thin' | 'thick'>;
+    isBootable: Optional<boolean>;
+    partition: Optional<'primary' | 'logical'>;
 }
