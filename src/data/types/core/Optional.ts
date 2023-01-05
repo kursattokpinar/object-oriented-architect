@@ -1,9 +1,7 @@
-export interface Placeholder {
-    hasValue: false;
-}
-
-
+export type Placeholder = {
+    isTemplatePlaceholder: true
+};
 
 export type Optional<T> = T | Placeholder;
 
-export const TEMPLATE_PLACEHOLDER: Placeholder = {hasValue: false};
+export const TEMPLATE_PLACEHOLDER: Placeholder = {isTemplatePlaceholder: true};
