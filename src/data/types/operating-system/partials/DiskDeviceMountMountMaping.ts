@@ -1,6 +1,6 @@
-import { Optional } from "../../core/Optional"
-import { DiskDeviceMountMappingItemV1 } from "../sub/DiskDeviceMountMappingItem"
+import { Optional } from '../../core/Optional';
+import { DiskDeviceMountMappingItemV1 } from '../sub/DiskDeviceMountMappingItem';
 
-export type DiskDeviceMountMappingV1 = {
-    diskDeviceMountMapping: DiskDeviceMountMappingItemV1[]
+export interface DiskDeviceMountMappingV1 {
+    diskDeviceMountMapping: DiskDeviceMountMappingItemV1[];
 }

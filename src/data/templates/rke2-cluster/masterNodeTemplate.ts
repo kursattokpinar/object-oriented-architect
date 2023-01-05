@@ -1,6 +1,8 @@
-import { TEMPLATE_PLACEHOLDER } from "../../types/core/Optional";
-import { decorateXLargeIntelHwProfile } from "../../types/hardware-profiles/factories/XlargeIntelHardwareProfileFactory";
-import { decorateUbuntu2004TrTimeZoneEnglishStaticIpXfsFormattedDisksOs } from "../../types/operating-system/factories/Ubuntu2004OsFactory";
+import { TEMPLATE_PLACEHOLDER } from '../../types/core/Optional';
+// tslint:disable-next-line:max-line-length
+import { decorateXLargeIntelHwProfile } from '../../types/hardware-profiles/factories/XlargeIntelHardwareProfileFactory';
+// tslint:disable-next-line:max-line-length
+import { decorateUbuntu2004TrTimeZoneEnglishStaticIpXfsFormattedDisksOs } from '../../types/operating-system/factories/Ubuntu2004OsFactory';
 
 
 let node: object;
@@ -14,7 +16,7 @@ node = decorateXLargeIntelHwProfile({}, {
     cpuPerformance: TEMPLATE_PLACEHOLDER,
     smt: TEMPLATE_PLACEHOLDER,
     disks: [
-        
+
         /**
          * Root disk.
          */
@@ -27,7 +29,7 @@ node = decorateXLargeIntelHwProfile({}, {
                 },
                 provisioningType: TEMPLATE_PLACEHOLDER,
                 isBootable: true,
-                partition: "primary"
+                partition: 'primary',
             },
         },
 
@@ -43,7 +45,7 @@ node = decorateXLargeIntelHwProfile({}, {
                 },
                 provisioningType: TEMPLATE_PLACEHOLDER,
                 isBootable: false,
-                partition: "logical"
+                partition: 'logical',
             },
         },
 
@@ -59,7 +61,7 @@ node = decorateXLargeIntelHwProfile({}, {
                 },
                 provisioningType: TEMPLATE_PLACEHOLDER,
                 isBootable: false,
-                partition: "logical"
+                partition: 'logical',
             },
         },
 
@@ -75,7 +77,7 @@ node = decorateXLargeIntelHwProfile({}, {
                 },
                 provisioningType: TEMPLATE_PLACEHOLDER,
                 isBootable: false,
-                partition: "logical"
+                partition: 'logical',
             },
         },
 
@@ -91,7 +93,7 @@ node = decorateXLargeIntelHwProfile({}, {
                 },
                 provisioningType: TEMPLATE_PLACEHOLDER,
                 isBootable: false,
-                partition: "logical"
+                partition: 'logical',
             },
         },
 
@@ -108,11 +110,11 @@ node = decorateXLargeIntelHwProfile({}, {
                 },
                 provisioningType: TEMPLATE_PLACEHOLDER,
                 isBootable: false,
-                partition: "logical"
+                partition: 'logical',
             },
         },
     ],
-    networkAdapter: TEMPLATE_PLACEHOLDER
+    networkAdapter: TEMPLATE_PLACEHOLDER,
 });
 
 /**
@@ -123,34 +125,34 @@ node = decorateUbuntu2004TrTimeZoneEnglishStaticIpXfsFormattedDisksOs(node, {
     diskDeviceMountMapping: [
         {
             diskName: 'root',
-            mountAt: '/'
+            mountAt: '/',
         },
         {
             diskName: 'home',
-            mountAt: '/home'
+            mountAt: '/home',
         },
         {
             diskName: 'rke2',
-            mountAt: '/var/lib/rancher/rke2'
+            mountAt: '/var/lib/rancher/rke2',
         },
         {
             diskName: 'log',
-            mountAt: '/var/log'
+            mountAt: '/var/log',
         },
         {
             diskName: 'etcd',
-            mountAt: '/var/lib/etcd'
+            mountAt: '/var/lib/etcd',
         },
         {
             diskName: 'etcd_wal',
-            mountAt: '/var/lib/etcd/member/wal'
-        }
+            mountAt: '/var/lib/etcd/member/wal',
+        },
     ],
     dnsServers: TEMPLATE_PLACEHOLDER,
     hostname: TEMPLATE_PLACEHOLDER,
     serverDomain: TEMPLATE_PLACEHOLDER,
-    ipv4Address: TEMPLATE_PLACEHOLDER
-})
+    ipv4Address: TEMPLATE_PLACEHOLDER,
+});
 
 // check if all disks are mounted
 // check if all mounted disks are from those defined

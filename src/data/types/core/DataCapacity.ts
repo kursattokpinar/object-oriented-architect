@@ -1,4 +1,4 @@
-import { Optional } from "./Optional";
+import { Optional } from './Optional';
 
 export interface DataCapacity {
     value: Optional<number>;

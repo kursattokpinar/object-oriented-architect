@@ -1,7 +1,7 @@
-import { Optional } from "../../core/Optional";
-import { DiskDeviceFormatMappingTypeV1 } from "../partials/DiskDeviceFormatMapping";
-import { DiskDeviceMountMappingV1 } from "../partials/DiskDeviceMountMountMaping";
-import { LinuxOperatingSystemsIdentifierV1 } from "../sub/linuxOperatingSytemsIdentifiers";
+import { Optional } from '../../core/Optional';
+import { DiskDeviceFormatMappingTypeV1 } from '../partials/DiskDeviceFormatMapping';
+import { DiskDeviceMountMappingV1 } from '../partials/DiskDeviceMountMountMaping';
+import { LinuxOperatingSystemsIdentifierV1 } from '../sub/linuxOperatingSytemsIdentifiers';
 
 export type OperatingSystemV1 = DiskDeviceFormatMappingTypeV1 & DiskDeviceMountMappingV1 & {
     operatingSystemFamily: 'windows' | 'linux',
@@ -22,11 +22,11 @@ export type OperatingSystemV1 = DiskDeviceFormatMappingTypeV1 & DiskDeviceMountM
             ipv4Address: Optional<string>,
             dnsServers: Optional<string[]>,
             isIpReserved: Optional<boolean>,
-            proxyAddress?: string
+            proxyAddress?: string,
         }[],
         allowInboundRules: {
             protocol: 'tcp' | 'udp',
-            port: number
-        }[]
-    }
-}
+            port: number,
+        }[],
+    },
+};

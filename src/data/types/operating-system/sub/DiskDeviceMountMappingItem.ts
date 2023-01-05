@@ -1,4 +1,4 @@
-export type DiskDeviceMountMappingItemV1 = {
-    diskName: string,
+export interface DiskDeviceMountMappingItemV1 {
+    diskName: string;
     mountAt: string;
 }

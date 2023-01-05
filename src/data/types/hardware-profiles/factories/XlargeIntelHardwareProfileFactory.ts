@@ -7,12 +7,12 @@ import { HwProfileWithIntelCpuV1 } from '../pub/intel/HwProfileWithIntelCpu';
 import { createAnySizeIntelHwProfile } from './AnySizeIntelHardwareProfileFactory';
 import { TEMPLATE_PLACEHOLDER } from '../../core/Optional';
 
-export type XLargeIntelHwProfileInput = {
-    processorSku: HwProfileWithIntelCpuV1['cpuSpec']['processorSku'],
-    cpuPerformance: HwProfileWithIntelCpuV1['cpuSpec']['performance'],
-    smt: HwProfileWithIntelCpuV1['cpuSpec']['smt'],
-    disks: HwProfileWithIntelCpuV1['disks'],
-    networkAdapter: HwProfileWithIntelCpuV1['networkAdapter'],
+export interface XLargeIntelHwProfileInput {
+    processorSku: HwProfileWithIntelCpuV1['cpuSpec']['processorSku'];
+    cpuPerformance: HwProfileWithIntelCpuV1['cpuSpec']['performance'];
+    smt: HwProfileWithIntelCpuV1['cpuSpec']['smt'];
+    disks: HwProfileWithIntelCpuV1['disks'];
+    networkAdapter: HwProfileWithIntelCpuV1['networkAdapter'];
 }
 
 export function createXLargeIntelHwProfile(args: XLargeIntelHwProfileInput): HwProfileWithIntelCpuV1 {
@@ -24,7 +24,7 @@ export function createXLargeIntelHwProfile(args: XLargeIntelHwProfileInput): HwP
                 value: 32,
             },
             interface: TEMPLATE_PLACEHOLDER,
-            speed: TEMPLATE_PLACEHOLDER
+            speed: TEMPLATE_PLACEHOLDER,
         },
         ...args,
     });
@@ -32,10 +32,11 @@ export function createXLargeIntelHwProfile(args: XLargeIntelHwProfileInput): HwP
     return xLargeIntelComputePowerV1;
 }
 
-export function decorateXLargeIntelHwProfile(target: object, args: XLargeIntelHwProfileInput): object & HwProfileWithIntelCpuV1 {
-    
+export function decorateXLargeIntelHwProfile(target: object, args: XLargeIntelHwProfileInput)
+    : object & HwProfileWithIntelCpuV1 {
+
     return {
         ...target,
-        ...createXLargeIntelHwProfile(args)
-    }
+        ...createXLargeIntelHwProfile(args),
+    };
 }
