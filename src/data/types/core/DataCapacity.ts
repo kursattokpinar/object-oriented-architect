@@ -1,4 +1,6 @@
+import { Optional } from "./Optional";
+
 export interface DataCapacity {
-    value: number;
+    value: Optional<number>;
     unit: 'KB' | 'MB' | 'GB' | 'TB';
 }

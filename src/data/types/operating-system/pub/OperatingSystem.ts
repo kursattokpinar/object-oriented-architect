@@ -1,10 +1,12 @@
+import { Optional } from "../../core/Optional";
 import { DiskDeviceFormatMappingTypeV1 } from "../partials/DiskDeviceFormatMapping";
 import { DiskDeviceMountMappingV1 } from "../partials/DiskDeviceMountMountMaping";
 import { LinuxOperatingSystemsIdentifierV1 } from "../sub/linuxOperatingSytemsIdentifiers";
 
 export type OperatingSystemV1 = DiskDeviceFormatMappingTypeV1 & DiskDeviceMountMappingV1 & {
     operatingSystemFamily: 'windows' | 'linux',
-    hostname: string,
+    hostname: Optional<string>,
+    serverDomain: Optional<string>,
     timezoneDiffFromGMT: number,
     osLanguage: 'en' | 'tr',
     keyboardLayout: {
@@ -16,10 +18,10 @@ export type OperatingSystemV1 = DiskDeviceFormatMappingTypeV1 & DiskDeviceMountM
     network: {
         adapters: {
             type: 'eth',
-            adapterName: string,
-            ipv4Address: string,
-            dnsServers: string[],
-            isIpReserved: boolean,
+            adapterName: Optional<string>,
+            ipv4Address: Optional<string>,
+            dnsServers: Optional<string[]>,
+            isIpReserved: Optional<boolean>,
             proxyAddress?: string
         }[],
         allowInboundRules: {

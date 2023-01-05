@@ -78,21 +78,78 @@ node = decorateXLargeIntelHwProfile({}, {
                 partition: "logical"
             },
         },
+
+        /**
+         * etcd directory
+         */
+        {
+            name: 'etcd',
+            spec: {
+                capacity: {
+                    unit: 'GB',
+                    value: 50,
+                },
+                provisioningType: TEMPLATE_PLACEHOLDER,
+                isBootable: false,
+                partition: "logical"
+            },
+        },
+
+
+        /**
+         * etcd wal directory
+         */
+        {
+            name: 'etcd_wal',
+            spec: {
+                capacity: {
+                    unit: 'GB',
+                    value: 50,
+                },
+                provisioningType: TEMPLATE_PLACEHOLDER,
+                isBootable: false,
+                partition: "logical"
+            },
+        },
     ],
     networkAdapter: TEMPLATE_PLACEHOLDER
 });
 
+/**
+ * Operating system layer
+ */
 node = decorateUbuntu2004TrTimeZoneEnglishStaticIpXfsFormattedDisksOs(node, {
-    adapterName: 'ens160',
+    adapterName: TEMPLATE_PLACEHOLDER,
     diskDeviceMountMapping: [
         {
-            diskName: 'boot',
+            diskName: 'root',
             mountAt: '/'
+        },
+        {
+            diskName: 'home',
+            mountAt: '/home'
+        },
+        {
+            diskName: 'rke2',
+            mountAt: '/var/lib/rancher/rke2'
+        },
+        {
+            diskName: 'log',
+            mountAt: '/var/log'
+        },
+        {
+            diskName: 'etcd',
+            mountAt: '/var/lib/etcd'
+        },
+        {
+            diskName: 'etcd_wal',
+            mountAt: '/var/lib/etcd/member/wal'
         }
     ],
-    dnsServers: ['8.8.8.8', '8.8.4.4'],
-    hostname: 'somehostname',
-    ipv4Address: '10.0.0.1'
+    dnsServers: TEMPLATE_PLACEHOLDER,
+    hostname: TEMPLATE_PLACEHOLDER,
+    serverDomain: TEMPLATE_PLACEHOLDER,
+    ipv4Address: TEMPLATE_PLACEHOLDER
 })
 
 // check if all disks are mounted
