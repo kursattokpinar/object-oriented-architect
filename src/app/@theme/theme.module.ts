@@ -39,6 +39,7 @@ import { COSMIC_THEME } from './styles/theme.cosmic';
 import { CORPORATE_THEME } from './styles/theme.corporate';
 import { DARK_THEME } from './styles/theme.dark';
 import { TreeComponent } from './components/tree/tree.component';
+import { HidePlaceholderPipe } from './pipes/hide-placeholder.pipe';
 
 const NB_MODULES = [
   NbLayoutModule,
@@ -75,7 +76,7 @@ const PIPES = [
 @NgModule({
   imports: [CommonModule, ...NB_MODULES],
   exports: [CommonModule, ...PIPES, ...COMPONENTS],
-  declarations: [...COMPONENTS, ...PIPES],
+  declarations: [...COMPONENTS, ...PIPES, HidePlaceholderPipe],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders<ThemeModule> {
