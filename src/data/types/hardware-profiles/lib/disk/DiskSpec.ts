@@ -1,5 +1,5 @@
-import { DataCapacity } from '../../../../core/DataCapacity';
-import { Optional } from '../../../../core/Optional';
+import { DataCapacity } from '../../../core/DataCapacity';
+import { Optional } from '../../../core/Optional';
 
 
 export interface DiskSpecV1 {

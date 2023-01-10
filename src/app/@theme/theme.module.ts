@@ -71,7 +71,7 @@ const PIPES = [
   RoundPipe,
   TimingPipe,
   NumberWithCommasPipe,
-  HidePlaceholderPipe
+  HidePlaceholderPipe,
 ];
 
 @NgModule({

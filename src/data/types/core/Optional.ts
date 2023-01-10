@@ -1,6 +1,6 @@
-export type Placeholder = {
-    isTemplatePlaceholder: true
-};
+export interface Placeholder {
+    isTemplatePlaceholder: true;
+}
 
 export type Optional<T> = T | Placeholder;
 

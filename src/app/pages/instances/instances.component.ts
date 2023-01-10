@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {rke2WorkerNodeTemplate} from '../../../data/templates/rke2-cluster/masterNodeTemplate';
+import { saveTemplate } from '../../../data/types/hardware-profiles/templates/XlargeIntelHardwareProfileFactory';
+import { saveTemplate as saveBase } from '../../../data/types/hardware-profiles/templates/AnySizeIntelHardwareProfileFactory';
+import { TemplateRecord, TemplateRepository } from '../../../lib/templateRepository';
 @Component({
   selector: 'ngx-instances',
   templateUrl: './instances.component.html',
@@ -7,10 +9,14 @@ import {rke2WorkerNodeTemplate} from '../../../data/templates/rke2-cluster/maste
 })
 export class InstancesComponent implements OnInit {
 
-  workerNode: object;
+  template: TemplateRecord;
 
   constructor() {
-    this.workerNode = rke2WorkerNodeTemplate;
+
+    saveBase();
+    saveTemplate();
+
+    this.template = TemplateRepository.getTemplateByName('XLarge Hardware Profile with Intel CPU');
   }
 
   ngOnInit(): void {

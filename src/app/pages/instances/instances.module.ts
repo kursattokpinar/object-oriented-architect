@@ -9,7 +9,7 @@ import { ThemeModule } from '../../@theme/theme.module';
   ],
   imports: [
     CommonModule,
-    ThemeModule
+    ThemeModule,
   ],
 })
 export class InstancesModule { }

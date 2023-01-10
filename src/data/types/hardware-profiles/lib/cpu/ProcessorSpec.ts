@@ -1,4 +1,4 @@
-import { Optional } from '../../../../core/Optional';
+import { Optional } from '../../../core/Optional';
 
 // tslint:disable-next-line:no-empty-interface
 export interface ProcessorPerformanceBaseV1 {

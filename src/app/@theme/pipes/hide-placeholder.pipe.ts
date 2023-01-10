@@ -3,17 +3,17 @@ import { isObject } from 'lodash';
 import omitDeep from 'deepdash/omitDeep';
 
 @Pipe({
-  name: 'hidePlaceholder'
+  name: 'hidePlaceholder',
 })
 export class HidePlaceholderPipe implements PipeTransform {
 
   transform(value: object, ...args: unknown[]): object {
 
-    if(isObject(value)) {
-      return omitDeep(value, 'isTemplatePlaceholder')
+    if (isObject(value)) {
+      return omitDeep(value, 'isTemplatePlaceholder');
     }
 
-    return value
+    return value;
   }
 
 }
